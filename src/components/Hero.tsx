@@ -191,7 +191,7 @@ export default function Hero() {
           </motion.p>
 
           {/* Social Links & Resume Download */}
-          <motion.div variants={itemVariants} className="flex items-center gap-4 mb-8">
+          <motion.div variants={itemVariants} className="flex flex-wrap items-center justify-center gap-3 mb-8">
             <a
               href="https://github.com/Shajidaa"
               target="_blank"
@@ -210,16 +210,16 @@ export default function Hero() {
             >
               <FaLinkedin className="text-xl" />
             </a>
-               <a
-                  href="https://www.facebook.com/profile.php?id=61564677698432"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:border-indigo-500/50 hover:bg-indigo-500/10 transition-all"
-                >
-                  <FaFacebook className="text-xl" />
-                </a>
             <a
-              href="https://drive.google.com/uc?export=download&id=19AytXCcQ9LebUKAEHFxeLbOOQy-chz85"
+              href="https://www.facebook.com/profile.php?id=61564677698432"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:border-indigo-500/50 hover:bg-indigo-500/10 transition-all"
+            >
+              <FaFacebook className="text-xl" />
+            </a>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1bOSTW3WcANeeS5E3Q9ovLFR9Ohsm3YC1"
               download
               onClick={handleResumeClick}
               className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:border-purple-500/50 hover:bg-purple-500/10 text-sm font-medium transition-all"

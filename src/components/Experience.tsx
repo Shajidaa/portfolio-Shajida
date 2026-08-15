@@ -17,7 +17,7 @@ export default function Experience() {
       <div className="max-w-5xl mx-auto px-6">
         {/* Section Heading */}
         <div className="flex flex-col gap-2 mb-16">
-          <span className="text-xs font-mono text-indigo-400 tracking-widest uppercase">04 / Journey</span>
+
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white select-none">Work Experience</h2>
           <div className="h-[2px] w-20 bg-indigo-500 rounded" />
         </div>
@@ -36,7 +36,7 @@ export default function Experience() {
             className="relative group"
           >
             {/* Timeline node icon */}
-            <span className="absolute -left-[45px] md:-left-[53px] top-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-black border border-indigo-500/30 text-indigo-400 group-hover:border-indigo-400 group-hover:text-white transition-colors duration-300 shadow-[0_0_15px_rgba(99,102,241,0.1)]">
+            <span className="absolute -left-[41px] md:-left-[53px] top-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-black border border-indigo-500/30 text-indigo-400 group-hover:border-indigo-400 group-hover:text-white transition-colors duration-300 shadow-[0_0_15px_rgba(99,102,241,0.1)]">
               <Briefcase className="w-4 h-4" />
             </span>
 
@@ -50,7 +50,7 @@ export default function Experience() {
                   </div>
                   <p className="text-base font-semibold text-slate-300">Full Stack Developer</p>
                 </div>
-                
+
                 {/* Duration Badge */}
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/5 bg-white/5 text-slate-400 text-xs font-mono w-fit">
                   <Calendar className="w-3.5 h-3.5" />

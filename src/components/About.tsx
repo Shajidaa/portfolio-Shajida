@@ -18,28 +18,28 @@ export default function About() {
       <div className="max-w-5xl mx-auto px-6">
         {/* Section Heading */}
         <div className="flex flex-col gap-2 mb-16">
-          <span className="text-xs font-mono text-indigo-400 tracking-widest uppercase">01 / Profile</span>
+
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white select-none">About Me</h2>
           <div className="h-[2px] w-20 bg-indigo-500 rounded" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
           {/* Objective Statement & Brief Introduction */}
           <motion.div
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="md:col-span-7 flex flex-col gap-6 text-slate-300 bg-slate-950/20 border border-white/5 hover:border-indigo-500/20 p-8 rounded-2xl backdrop-blur-sm transition-all duration-300 group"
+            className="md:col-span-7 flex flex-col gap-6 text-slate-300 bg-slate-950/20 border border-white/5 hover:border-indigo-500/20 p-5 sm:p-8 rounded-2xl backdrop-blur-sm transition-all duration-300 group"
           >
             <div className="flex items-center gap-2 text-white">
               <Sparkles className="w-5 h-5 text-indigo-400" />
               <h3 className="font-mono text-sm font-semibold tracking-wider uppercase">Career Objective</h3>
             </div>
-            
+
             <p className="text-base leading-relaxed text-slate-300 font-sans">
-              Aspiring Junior MERN Stack Developer eager to start a professional career in web development. 
-              Skilled in building responsive, user-focused applications using MongoDB, Express.js, React, and Node.js. 
+              Aspiring Junior MERN Stack Developer eager to start a professional career in web development.
+              Skilled in building responsive, user-focused applications using MongoDB, Express.js, React, and Node.js.
               I am actively seeking an opportunity to learn, contribute to real-world projects, and grow as a full-stack developer in a dynamic team environment.
             </p>
 

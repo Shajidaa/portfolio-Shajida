@@ -80,7 +80,7 @@ export default function Contact() {
   const socialLinks = [
     {
       name: "GitHub",
-      url:"https://github.com/Shajidaa",
+      url: "https://github.com/Shajidaa",
       icon: GithubIcon,
       colorClass: "hover:text-white hover:bg-white/10 hover:border-white/20",
     },
@@ -89,13 +89,13 @@ export default function Contact() {
       url: "https://www.linkedin.com/in/shajida-akter-lopa/",
       icon: LinkedinIcon,
       colorClass: "hover:text-blue-400 hover:bg-blue-500/10 hover:border-blue-500/20",
-    },{
-      name:"Facebook",
-      url:"https://www.facebook.com/profile.php?id=61564677698432",
+    }, {
+      name: "Facebook",
+      url: "https://www.facebook.com/profile.php?id=61564677698432",
       icon: FaFacebook,
-            colorClass: "hover:text-white hover:bg-white/10 hover:border-white/20",
+      colorClass: "hover:text-white hover:bg-white/10 hover:border-white/20",
     }
-    
+
   ];
 
   return (
@@ -104,7 +104,7 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto px-6">
         {/* Section Heading */}
         <div className="flex flex-col gap-2 mb-16">
-          <span className="text-xs font-mono text-indigo-400 tracking-widest uppercase">Connect</span>
+
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white select-none">Get In Touch</h2>
           <div className="h-[2px] w-20 bg-indigo-500 rounded" />
         </div>
@@ -165,12 +165,12 @@ export default function Contact() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="flex flex-col items-center justify-center p-8 rounded-2xl bg-slate-950/10 border border-white/5 text-center backdrop-blur-sm"
+          className="flex flex-col items-center justify-center p-5 sm:p-8 rounded-2xl bg-slate-950/10 border border-white/5 text-center backdrop-blur-sm"
         >
           <h3 className="text-sm font-mono text-slate-500 uppercase tracking-widest mb-6 font-semibold">
             Social Networks
           </h3>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             {socialLinks.map((soc) => {
               const Icon = soc.icon;
               return (
@@ -179,7 +179,7 @@ export default function Contact() {
                   href={soc.url}
                   target="_blank"
                   rel="noreferrer"
-                  className={`flex items-center gap-2 px-5 py-3 border border-white/5 bg-white/5 rounded-full text-slate-300 transition-all duration-300 ${soc.colorClass} group`}
+                  className={`flex items-center gap-2 px-4 py-2.5 border border-white/5 bg-white/5 rounded-full text-slate-300 transition-all duration-300 ${soc.colorClass} group`}
                 >
                   <Icon className="w-4 h-4 transition-transform group-hover:scale-110" />
                   <span className="text-xs font-semibold tracking-wider uppercase font-mono">{soc.name}</span>

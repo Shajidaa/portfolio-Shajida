@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
+import {
   Server, Database, Cloud, Cpu, Layout
 } from "lucide-react";
 import { cn } from "@/utils/cn";
@@ -20,7 +20,7 @@ const skillsList: Skill[] = [
   { name: "React.js", category: "frontend", level: "Advanced", desc: "SPA & hooks" },
   { name: "Next.js", category: "frontend", level: "Intermediate", desc: "App Router & SSR" },
   { name: "Shadcn UI", category: "frontend", level: "Advanced", desc: "Accessible component system" },
-  { name: "Dasiy UI", category: "frontend", level: "Advanced", desc: "Accessible component system" },
+  { name: "Daisy UI", category: "frontend", level: "Advanced", desc: "Accessible component system" },
   { name: "JavaScript (ES6+)", category: "frontend", level: "Advanced", desc: "Core & async" },
   { name: "TailwindCSS", category: "frontend", level: "Advanced", desc: "Utility-first design" },
   { name: "HTML5", category: "frontend", level: "Advanced", desc: "Semantic structure" },
@@ -69,10 +69,10 @@ export default function Skills() {
 
   return (
     <section id="skills" className="relative py-24 md:py-32 z-10 border-t border-white/5 bg-black/90">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
         {/* Section Heading */}
         <div className="flex flex-col gap-2 mb-16">
-          <span className="text-xs font-mono text-indigo-400 tracking-widest uppercase"> Expertise</span>
+
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white select-none">Skills & Stack</h2>
           <div className="h-[2px] w-20 bg-indigo-500 rounded" />
         </div>
@@ -88,7 +88,7 @@ export default function Skills() {
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
                 className={cn(
-                  "relative flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium tracking-wide transition-colors duration-300",
+                  "relative flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium tracking-wide transition-colors duration-300",
                   isActive ? "text-white" : "text-slate-400 hover:text-white"
                 )}
               >
@@ -108,9 +108,9 @@ export default function Skills() {
         </div>
 
         {/* Skills Grid */}
-        <motion.div 
-          layout 
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+        <motion.div
+          layout
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4"
         >
           <AnimatePresence mode="popLayout">
             {filteredSkills.map((skill) => (
@@ -121,11 +121,11 @@ export default function Skills() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.2 }}
-                className="group relative flex items-start gap-4 p-5 rounded-2xl bg-slate-950/20 border border-white/5 hover:border-indigo-500/20 hover:bg-slate-950/40 transition-all duration-300 backdrop-blur-sm"
+                className="group relative flex items-start gap-3 p-3 sm:p-5 rounded-2xl bg-slate-950/20 border border-white/5 hover:border-indigo-500/20 hover:bg-slate-950/40 transition-all duration-300 backdrop-blur-sm"
               >
                 {/* Decorative glowing border effect on hover */}
                 <div className="absolute inset-0 rounded-2xl border border-indigo-500/0 group-hover:border-indigo-500/10 pointer-events-none transition-colors duration-300" />
-                
+
                 {/* Technical icon background */}
                 <div className="flex items-center justify-center p-2 rounded-xl bg-white/5 text-slate-400 group-hover:text-indigo-400 group-hover:bg-indigo-950/30 transition-all duration-300">
                   {skill.category === "frontend" && <Layout className="w-5 h-5" />}
@@ -139,7 +139,7 @@ export default function Skills() {
                     <h3 className="text-sm font-semibold text-white truncate font-sans group-hover:text-indigo-200 transition-colors">
                       {skill.name}
                     </h3>
-                    <span className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-white/5 text-indigo-300 border border-indigo-500/10 uppercase tracking-wider">
+                    <span className="hidden sm:inline text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-white/5 text-indigo-300 border border-indigo-500/10 uppercase tracking-wider shrink-0">
                       {skill.level}
                     </span>
                   </div>

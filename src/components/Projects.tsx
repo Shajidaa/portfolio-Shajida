@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { ExternalLink,  Layers, Sparkles } from "lucide-react";
+import { ExternalLink, Layers, Sparkles } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
 interface Project {
@@ -92,20 +92,21 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="relative py-28 md:py-36 z-10 border-t border-white/10 bg-neutral-950 overflow-hidden">
+    <section id="projects" className="relative py-24 md:py-32 z-10 border-t border-white/5 bg-black/90 overflow-hidden">
       <div className="absolute top-1/3 left-5 w-80 h-80 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/3 right-5 w-80 h-80 bg-violet-600/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col items-center text-center gap-3 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono tracking-widest uppercase">
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col gap-2 mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono tracking-widest uppercase w-fit">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Portfolio / 03</span>
+
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">Projects</span>
           </h2>
-          <p className="text-slate-400 text-xs sm:text-sm max-w-lg">
+          <div className="h-[2px] w-20 bg-indigo-500 rounded" />
+          <p className="text-slate-400 text-xs sm:text-sm max-w-lg mt-1">
             High-performance web applications built with modern architectures, clean UI, and robust backend integrations.
           </p>
         </div>
@@ -115,7 +116,7 @@ export default function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
         >
           {projectsList.map((project) => (
             <motion.div
@@ -127,7 +128,7 @@ export default function Projects() {
 
               {/* Minimalist Thumbnail Header */}
               {project.image && (
-                <div className="relative w-full h-44 overflow-hidden border-b border-white/10 bg-neutral-900">
+                <div className="relative w-full h-36 sm:h-44 overflow-hidden border-b border-white/10 bg-neutral-900">
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent z-10 opacity-40" />
                   <img
                     src={project.image}
@@ -180,7 +181,7 @@ export default function Projects() {
                   >
                     <span>Live</span> <ExternalLink className="w-2.5 h-2.5" />
                   </a>
-                  
+
                   {project.clientLink && (
                     <a
                       href={project.clientLink}

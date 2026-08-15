@@ -31,7 +31,7 @@ export default function Navbar() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-    
+
     const targetElement = document.querySelector(href);
     if (targetElement) {
       const navHeight = 80;
@@ -48,8 +48,8 @@ export default function Navbar() {
       <header
         className={cn(
           "fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out px-6 md:px-12 py-4",
-          isScrolled 
-            ? "flex justify-center" 
+          isScrolled
+            ? "flex justify-center"
             : " bg-black/20 backdrop-blur-sm"
         )}
       >
@@ -70,7 +70,7 @@ export default function Navbar() {
           {/* Logo Section */}
           <a href="#hero" onClick={(e) => handleScroll(e, "#hero")} className="group flex items-center gap-1 select-none">
             <span className="text-xl font-bold tracking-tight text-white font-mono">S</span>
-            
+
             <div className="relative flex overflow-hidden h-6 items-center">
               <AnimatePresence mode="wait">
                 {!isScrolled ? (
@@ -146,11 +146,11 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-black flex flex-col justify-center px-2 md:px-16"
+            className="fixed inset-0 z-40 bg-black flex flex-col justify-center px-8 md:px-16"
           >
             {/* Architectural Grid for mobile menu overlay */}
             <div className="absolute inset-0 bg-size-[60px_60px] pointer-events-none opacity-[0.04] bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] z-0" />
-            
+
             <div className="absolute top-24 left-8 right-8 h-[1px] bg-white/10 z-10" />
 
             <nav className="flex flex-col gap-6 z-10">
@@ -162,13 +162,13 @@ export default function Navbar() {
                   transition={{ delay: idx * 0.08, type: "spring", stiffness: 100 }}
                   href={link.href}
                   onClick={(e) => handleScroll(e, link.href)}
-                  className="text-sm font-semibold tracking-tight text-slate-300 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center justify-between group"
+                  className="text-2xl font-semibold tracking-tight text-slate-300 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center justify-between group py-2"
                 >
                   <span>{link.name}</span>
                   <ArrowUpRight className="w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:text-indigo-400 transition-all duration-300" />
                 </motion.a>
               ))}
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -177,14 +177,14 @@ export default function Navbar() {
               >
                 <div className="h-[1px] bg-white/10 w-full mb-6" />
                 <p className="text-xs font-mono text-slate-500 uppercase tracking-widest">Connect</p>
-                <a 
-                  href="mailto:shajidaislam34@gmail.com" 
+                <a
+                  href="mailto:shajidaislam34@gmail.com"
                   className="text-lg text-slate-300 hover:text-indigo-400 transition-colors"
                 >
                   shajidaislam34@gmail.com
                 </a>
-                <a 
-                  href="tel:+8801404198350" 
+                <a
+                  href="tel:+8801404198350"
                   className="text-lg text-slate-300 hover:text-indigo-400 transition-colors"
                 >
                   +880-1404-198-350
