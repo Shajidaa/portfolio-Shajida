@@ -46,7 +46,8 @@ export default function Experience() {
                 <div>
                   <div className="flex items-center gap-2 text-white mb-1.5">
                     <Building2 className="w-4.5 h-4.5 text-indigo-400" />
-                    <h3 className="text-lg font-bold">Initstartack</h3>
+                    <h3 className="text-lg font-bold">
+                      iniAstra Tech</h3>
                   </div>
                   <p className="text-base font-semibold text-slate-300">Full Stack Developer</p>
                 </div>
