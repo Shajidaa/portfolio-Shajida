@@ -82,9 +82,19 @@ export default function About() {
               </div>
               <div className="flex flex-col gap-1.5 font-sans">
                 <h4 className="text-base font-semibold text-white group-hover:text-indigo-300 transition-colors">
+<<<<<<< HEAD
              Inter Science 2020 (5.00)
                 </h4>
                
+=======
+                  Bachelor of Arts in Islamic Studies
+                </h4>
+                <p className="text-sm text-slate-300">Jagannath University, Dhaka (JnU)</p>
+                <div className="flex items-center justify-between text-xs text-slate-500 font-mono mt-1">
+                  <span>IST (Present)</span>
+                  <span>Enrolled: 2022</span>
+                </div>
+>>>>>>> ad83b0d899d9f4dfa983c0ba9bcfef12d023cd9a
               </div>
             </motion.div>
 
