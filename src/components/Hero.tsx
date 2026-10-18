@@ -219,11 +219,10 @@ export default function Hero() {
               <FaFacebook className="text-xl" />
             </a>
             <a
-<<<<<<< HEAD
+
+
               href="https://drive.google.com/uc?export=download&id=1DUFKxlwt1-rX49sj1W2re7K4pNjW2SDc"
-=======
-              href="https://drive.google.com/uc?export=download&id=1bOSTW3WcANeeS5E3Q9ovLFR9Ohsm3YC1"
->>>>>>> ad83b0d899d9f4dfa983c0ba9bcfef12d023cd9a
+
               download
               onClick={handleResumeClick}
               className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:border-purple-500/50 hover:bg-purple-500/10 text-sm font-medium transition-all"

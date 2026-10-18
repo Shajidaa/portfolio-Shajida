@@ -2,7 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import { ExternalLink, Layers, Sparkles } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
+import { FaDatabase, FaGithub } from "react-icons/fa";
 
 interface Project {
   title: string;
@@ -12,17 +12,30 @@ interface Project {
   liveLink: string;
   clientLink?: string;
   serverLink?: string;
+  erdLink?: string;
   image?: string;
   badge?: string;
 }
 
 const projectsList: Project[] = [
   {
+    image: "https://i.ibb.co.com/6fJYmDd/image.png",
+    title: "CourierPro",
+    subtitle: "Logistics & Courier Management Platform",
+    overview: "Comprehensive courier management system with role-based access, real-time tracking, and integrated Bkash payment gateway for seamless transactions.",
+    techStack: ["Next.js", "Prisma", "TypeScript", "ShadCN UI", "Bkash Payment Gateway","Redis"],
+    liveLink: "https://courier-platform-client.vercel.app/",
+    clientLink: "https://github.com/Shajidaa/courier_platform_client",
+    serverLink: "https://github.com/Shajidaa/courier-platform-server",
+    erdLink:"https://drawsql.app/teams/shajida-akter/diagrams/courier-logistics-management-platform",
+    badge: "Full Stack"
+  },
+  {
     image: "https://i.ibb.co.com/cSbxQq4X/image.png",
     title: "Nest Rent",
     subtitle: "Property Rental Platform",
     overview: "Role-based rental ecosystem for tenants, landlords, and admins featuring property requests, approvals, reviews, and integrated Stripe payments.",
-    techStack: ["Next.js", "Prisma", "PostgreSQL", "TypeScript", "Tailwind", "Stripe"],
+    techStack: ["Next.js", "Prisma", "PostgreSQL", "TypeScript", "ShadCN UI", "Stripe"],
     liveLink: "https://rent-nest-frontend-lemon.vercel.app/",
     clientLink: "https://github.com/Shajidaa/rent-nest-frontend",
     serverLink: "https://github.com/Shajidaa/rent-nest-backend",
@@ -172,7 +185,7 @@ export default function Projects() {
                 </div>
 
                 {/* Action Links Bar */}
-                <div className={`grid ${project.serverLink ? 'grid-cols-3' : 'grid-cols-2'} gap-2 mt-auto pt-3 border-t border-white/10 font-mono text-[10px] font-medium`}>
+                <div className={`grid ${project.serverLink ? 'grid-cols-4' : 'grid-cols-3'} gap-2 mt-auto pt-3 border-t border-white/10 font-mono text-[10px] font-medium`}>
                   <a
                     href={project.liveLink}
                     target="_blank"
@@ -201,6 +214,16 @@ export default function Projects() {
                       className="flex items-center justify-center gap-1 py-2 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white rounded-lg border border-white/10 transition-all uppercase tracking-wider"
                     >
                       <span>Server</span> <FaGithub className="w-2.5 h-2.5" />
+                    </a>
+                  )}
+                  {project.erdLink && (
+                    <a
+                      href={project.erdLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center justify-center gap-1 py-2 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white rounded-lg border border-white/10 transition-all uppercase tracking-wider"
+                    >
+                      <span>ERD</span> <FaDatabase className="w-2.5 h-2.5" />
                     </a>
                   )}
                 </div>
