@@ -90,7 +90,7 @@ export default function About() {
                 <p className="text-sm text-slate-300">Jagannath University, Dhaka (JnU)</p>
                 <div className="flex items-center justify-between text-xs text-slate-500 font-mono mt-1">
                   <span>IST (Present)</span>
-                  <span>Enrolled: 2022</span>
+                  <span>Enrolled: 2023</span>
                 </div>
 
               </div>
