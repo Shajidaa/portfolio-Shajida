@@ -82,7 +82,7 @@ export default function About() {
               </div>
               <div className="flex flex-col gap-1.5 font-sans">
                 <h4 className="text-base font-semibold text-white group-hover:text-indigo-300 transition-colors">
-                  Inter Science 2020 (5.00)
+                  HSC Science 2021 (5.00)
                 </h4>
                 <h4 className="text-base font-semibold text-white group-hover:text-indigo-300 transition-colors">
                   Bachelor of Arts in Islamic Studies
